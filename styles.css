@@ -1,0 +1,440 @@
+* {
+  font-family: sans-serif, monospace;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  scroll-behavior: smooth;
+}
+
+html {
+  font-size: 62.4%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 7rem;
+}
+html::-webkit-scrollbar {
+  width: 1rem;
+}
+html::-webkit-scrollbar-track {
+  background: #fff;
+}
+html::-webkit-scrollbar-thumb {
+  background: #000;
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.heading span {
+  font-size: 2.5rem;
+}
+.heading h1 {
+  font-size: 4rem;
+  padding-top: 0.5rem;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 1rem;
+  font-size: 2rem;
+  color: #fff;
+  background: #000;
+  border: 0.2rem solid #000;
+  cursor: pointer;
+  font-weight: bolder;
+  border-radius: 0.5rem;
+}
+.btn:hover {
+  background: #fff;
+  color: #000;
+  transition: all 500ms ease;
+}
+
+.line-down {
+  position: relative;
+  display: inline-block;
+  z-index: 0;
+}
+.line-down::before {
+  content: "";
+  position: absolute;
+  bottom: 0.7rem;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  background: #ff5454;
+  z-index: -1;
+  -webkit-clip-path: polygon(0 85%, 100% 75%, 100% 100%, 0% 100%);
+          clip-path: polygon(0 85%, 100% 75%, 100% 100%, 0% 100%);
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  box-shadow: 0rem 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+.header .logo {
+  font-size: 2.5rem;
+  color: #000;
+}
+.header .logo .fa-wallet {
+  position: absolute;
+  color: rgb(10, 151, 10);
+  font-size: 4rem;
+  left: 2rem;
+  top: 0rem;
+}
+.header .navbar a {
+  margin: 0rem 1rem;
+  font-size: 2rem;
+  color: #000;
+}
+.header .navbar a:hover {
+  text-decoration: underline;
+}
+.header .btn {
+  margin-top: 0;
+}
+
+#menu-btn {
+  cursor: pointer;
+  font-size: 3rem;
+  display: none;
+}
+
+.home {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  background: #ffafaf;
+}
+.home .image {
+  flex: 1 1 42rem;
+  margin-top: 5rem;
+}
+.home .image img {
+  width: 100%;
+  animation: float 4s linear infinite;
+}
+.home .content {
+  flex: 1 1 42rem;
+}
+.home h3 {
+  font-size: 6rem;
+}
+.home p {
+  font-size: 2rem;
+  padding: 1rem 0;
+  line-height: 2;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0rem);
+  }
+  50% {
+    transform: translateY(-4rem);
+  }
+  100% {
+    transform: translateY(0rem);
+  }
+}
+.services {
+  background: #d0fedc;
+}
+.services .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
+  gap: 1.5rem;
+}
+.services .box-container .box {
+  background: #fff;
+  padding: 3rem 2rem;
+  text-align: center;
+  border-radius: 0.5rem;
+}
+.services .box-container .box img {
+  height: 8rem;
+  margin-bottom: 0.75rem;
+}
+.services .box-container .box h3 {
+  font-size: 2.25rem;
+  padding: 1.5rem 0;
+}
+.services .box-container .box p {
+  line-height: 2;
+  font-size: 1.75rem;
+}
+
+.steps {
+  background: #c7bffe;
+}
+.steps .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
+  gap: 1.5rem;
+}
+.steps .box-container .box {
+  text-align: center;
+  padding: 3rem 2rem;
+}
+.steps .box-container .box img {
+  height: 20rem;
+}
+.steps .box-container .box h3 {
+  font-size: 2.25rem;
+  padding: 2rem 0;
+}
+.steps .box-container .box p {
+  font-size: 1.75rem;
+  line-height: 2;
+  padding-bottom: 1rem;
+}
+
+.features .box-container .box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+  min-height: 60vh;
+  margin-bottom: 3rem;
+}
+.features .box-container .box:last-child {
+  margin-bottom: 0;
+}
+.features .box-container .box:nth-child(even) {
+  flex-flow: row-reverse wrap;
+}
+.features .box-container .box .image {
+  flex: 1 1 42rem;
+}
+.features .box-container .box .image img {
+  width: 100%;
+}
+.features .box-container .box .content {
+  flex: 1 1 42rem;
+}
+.features .box-container .box .content h3 {
+  font-size: 3rem;
+  line-height: 1.5;
+}
+.features .box-container .box .content p {
+  padding: 1.5rem 0;
+  line-height: 2;
+  font-size: 1.75rem;
+}
+
+.price {
+  background: #ffe1ba;
+  text-align: center;
+}
+.price .price-container {
+  display: inline-block;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  margin-bottom: 3rem;
+  background: #fff;
+  border: 0.25rem solid #000;
+}
+.price .price-container span {
+  display: inline-block;
+  font-weight: bolder;
+  padding: 1rem 3rem;
+  font-size: 1.75rem;
+  cursor: pointer;
+  color: #000;
+  border-radius: 0.5rem;
+}
+.price .price-container span.active {
+  background: #000;
+  color: #fff;
+}
+.price .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
+  gap: 1.5rem;
+}
+.price .box-container .box {
+  padding: 3rem 2rem;
+  border-radius: 0.5rem;
+  background: #fff;
+}
+.price .box-container .box:nth-child(2) {
+  border: 0.25rem solid #000;
+}
+.price .box-container .box:nth-child(2) h3 {
+  background: #cae8e3;
+}
+.price .box-container .box h3 {
+  font-size: 2rem;
+  display: inline-block;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1.5rem;
+  background: #c7bffe;
+}
+.price .box-container .box .price {
+  padding: 2rem 0;
+}
+.price .box-container .box .price .month,
+.price .box-container .box .price .year {
+  font-size: 5rem;
+}
+.price .box-container .box .price .month span,
+.price .box-container .box .price .year span {
+  font-size: 3rem;
+}
+.price .box-container .box .price .year {
+  display: none;
+}
+.price .box-container .box .list {
+  padding: 1rem 0;
+}
+.price .box-container .box .list p {
+  padding: 1.5rem 0;
+  font-size: 1.75rem;
+}
+.price .box-container .box .list p .fa-check {
+  padding-right: 0.5rem;
+}
+
+.faq {
+  background: #ffbaef;
+}
+.faq .accordion-container {
+  margin: 1rem auto;
+  max-width: 70rem;
+}
+.faq .accordion-container .accordion {
+  margin: 1rem 0;
+  background-color: #fff;
+  border-radius: 0.5rem;
+}
+.faq .accordion-container .accordion.active .accordion-heading .fa-angle-down {
+  transform: rotate(180deg);
+}
+.faq .accordion-container .accordion.active .accordion-content {
+  display: block;
+}
+.faq .accordion-container .accordion .accordion-content {
+  padding: 0rem 2rem 2rem 2rem;
+  padding-top: 0;
+  line-height: 2;
+  font-size: 1.75rem;
+  display: none;
+}
+.faq .accordion-container .accordion .accordion-heading {
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  cursor: pointer;
+}
+.faq .accordion-container .accordion .accordion-heading h3 {
+  font-size: 2.25rem;
+  line-height: 1.5;
+}
+.faq .accordion-container .accordion .accordion-heading .fa-angle-down {
+  font-size: 2.25rem;
+  transition: all 200ms linear;
+}
+
+.newsletter .content {
+  text-align: center;
+  max-width: 60rem;
+  margin: 1rem auto;
+}
+.newsletter .content h3 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+.newsletter .content p {
+  padding: 1rem 0;
+  line-height: 2;
+  font-size: 1.75rem;
+}
+.newsletter .content p a {
+  color: #fff;
+}
+.newsletter .content p a:hover {
+  text-decoration: underline;
+  color: #fff;
+  background: #000;
+}
+.newsletter .content form {
+  display: flex;
+  border: 0.2rem solid #000;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  margin: 1rem 0;
+}
+.newsletter .content form .email {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  font-size: 1.75rem;
+  text-transform: none;
+}
+.newsletter .content form .btn {
+  margin-top: 0;
+}
+
+.footer {
+  background: #f6e4d5;
+}
+.footer .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  gap: 1.5rem;
+}
+.footer .box-container .box h3 {
+  font-size: 2.25rem;
+  padding: 1rem 0;
+}
+.footer .box-container .box a {
+  font-size: 2rem;
+  color: #000;
+  display: block;
+  padding: 1rem 0;
+}
+.footer .box-container .box a:hover {
+  text-decoration: underline;
+}
+.footer .credit {
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+  font-size: 2rem;
+}
+
+@media (max-width: 768px) {
+  #menu-btn {
+    position: absolute;
+    display: block;
+    right: 1rem;
+    top: 1rem;
+  }
+  .header .btn {
+    display: none;
+  }
+  .navbar {
+    position: absolute;
+    left: 20rem;
+    top: 1rem;
+  }
+}/*# sourceMappingURL=styles.css.map */
